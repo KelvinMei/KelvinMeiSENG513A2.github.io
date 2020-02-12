@@ -1,5 +1,3 @@
-
-
-$("#button1").click(function(){
-  $(this).hide();
-});
+function display(val) {
+  document.getElementById("screen").value += val;
+}
