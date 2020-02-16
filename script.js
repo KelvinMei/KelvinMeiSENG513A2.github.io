@@ -13,18 +13,35 @@ function number(val) {
 }
 
 function solve() {
-  document.getElementById("screen").value = eval(
-    document.getElementById("screen").value
-  );
-  ANS = document.getElementById("screen").value;
+  try {
+    document.getElementById("output").value = document.getElementById(
+      "screen"
+    ).value;
+    document.getElementById("screen").value = eval(
+      document.getElementById("screen").value
+    );
+    ANS = document.getElementById("screen").value;
+    document.getElementById("output").value += "=" + ANS;
+  } catch (e) {
+    document.getElementById("output").value =
+      document.getElementById("screen").value + "=Error";
+  }
 }
 
 function addANS() {
-  document.getElementById("screen").value += ANS;
+  let str = document.getElementById("screen").value;
+  document.getElementById("screen").value =
+    str === "0" && str.length === 1
+      ? ANS
+      : document.getElementById("screen").value + ANS;
 }
 
 function CE() {
   let str = document.getElementById("screen").value;
   document.getElementById("screen").value =
     str.length === 1 ? 0 : str.substring(0, str.length - 1);
+}
+
+function reset() {
+  document.getElementById("screen").value = "0";
 }
