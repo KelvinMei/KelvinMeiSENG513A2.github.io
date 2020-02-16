@@ -12,7 +12,7 @@
     <table>
       <tr>
         <td colspan="4">
-          <input type="text" id="screen" value="0" readonly />
+          <input type="text" id="screen" value="0" disabled />
         </td>
       </tr>
       <tr>
@@ -27,27 +27,29 @@
           </button>
         </td>
         <td>
-          <button class="button" id="button%" value="%" onclick="display('%')">
-            %
+          <button class="button" id="buttonANS" value="ANS" onclick="addANS()">
+            ANS
           </button>
         </td>
         <td>
-          <button class="button" id="buttonCE" value="CE">CE</button>
+          <button class="button" id="buttonCE" value="CE" onclick="CE()">
+            CE
+          </button>
         </td>
       </tr>
       <tr>
         <td>
-          <button class="button" id="button7" value="7" onclick="display('7')">
+          <button class="button" id="button7" value="7" onclick="number('7')">
             7
           </button>
         </td>
         <td>
-          <button class="button" id="button8" value="8" onclick="display('8')">
+          <button class="button" id="button8" value="8" onclick="number('8')">
             8
           </button>
         </td>
         <td>
-          <button class="button" id="button9" value="9" onclick="display('9')">
+          <button class="button" id="button9" value="9" onclick="number('9')">
             9
           </button>
         </td>
@@ -59,17 +61,17 @@
       </tr>
       <tr>
         <td>
-          <button class="button" id="button4" value="4" onclick="display('4')">
+          <button class="button" id="button4" value="4" onclick="number('4')">
             4
           </button>
         </td>
         <td>
-          <button class="button" id="button5" value="5" onclick="display('5')">
+          <button class="button" id="button5" value="5" onclick="number('5')">
             5
           </button>
         </td>
         <td>
-          <button class="button" id="button6" value="6" onclick="display('6')">
+          <button class="button" id="button6" value="6" onclick="number('6')">
             6
           </button>
         </td>
@@ -81,17 +83,17 @@
       </tr>
       <tr>
         <td>
-          <button class="button" id="button1" value="1" onclick="display('1')">
+          <button class="button" id="button1" value="1" onclick="number('1')">
             1
           </button>
         </td>
         <td>
-          <button class="button" id="button2" value="2" onclick="display('2')">
+          <button class="button" id="button2" value="2" onclick="number('2')">
             2
           </button>
         </td>
         <td>
-          <button class="button" id="button3" value="3" onclick="display('3')">
+          <button class="button" id="button3" value="3" onclick="number('3')">
             3
           </button>
         </td>
@@ -103,7 +105,7 @@
       </tr>
       <tr>
         <td>
-          <button class="button" id="button0" value="0" onclick="display('0')">
+          <button class="button" id="button0" value="0" onclick="number('0')">
             0
           </button>
         </td>
@@ -113,7 +115,9 @@
           </button>
         </td>
         <td>
-          <button class="button" id="button=" value="=">=</button>
+          <button class="button" id="button=" value="=" onclick="solve()">
+            =
+          </button>
         </td>
         <td>
           <button class="button" id="button+" value="+" onclick="display('+')">
